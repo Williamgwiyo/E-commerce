@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="3dp"
+    app:contentPadding="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/shopIv"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/store_gray"
+            app:civ_border_width="1dp"/>
+
+        <ImageView
+            android:id="@+id/nextIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_right_arrow"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"/>
+
+        <LinearLayout
+            android:id="@+id/lL1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toEndOf="@id/shopIv"
+            android:layout_toStartOf="@id/nextIv">
+
+            <TextView
+                android:id="@+id/shopNameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:maxLines="1"
+                android:text="Shop Name"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/phoneTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Phone"
+                android:textColor="@android:color/black"
+                />
+
+            <TextView
+                android:id="@+id/addressTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Address"
+                android:textColor="@android:color/black"
+                />
+
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/callBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@+id/shopIv"
+            android:layout_below="@+id/lL1"
+            android:src="@drawable/ic_phone"
+            android:tint="@android:color/holo_green_dark"
+            android:background="@null"/>
+
+        <ImageButton
+            android:id="@+id/MessageBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_below="@+id/lL1"
+            android:layout_toRightOf="@+id/callBtn"
+            android:src="@drawable/blue_message"
+            android:background="@null"/>
+
+        <RatingBar
+            android:id="@+id/shopratings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lL1"
+            android:layout_marginTop="8dp"
+            android:layout_toLeftOf="@id/nextIv"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_gravity="end"
+            android:layout_marginEnd="10dp"
+            android:numStars="5"
+            android:rating="0"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/MessageBtn"
+            android:background="@color/RecyclerViewBackground"/>
+    </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>

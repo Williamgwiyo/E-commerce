@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/messageLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:orientation="horizontal">
+
+    <TextView
+            android:id="@+id/rmessage"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_sender"
+            android:padding="17dp"
+            android:layout_alignParentEnd="true"
+            android:paddingEnd="20dp"
+            android:text="TextView"
+            android:textColor="@android:color/black"
+        />
+
+        <ImageView
+            android:id="@+id/leftImage1"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:transitionName="image"
+            android:paddingEnd="18dp"
+            android:paddingStart="8dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/bigplaceholder"
+            android:background="@drawable/bg_sender"
+            android:scaleType="centerCrop"/>
+
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/rdelivered"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:paddingEnd="17dp"
+        android:text="Delivered"
+
+        />
+    <TextView
+        android:id="@+id/dateTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Time"
+        android:gravity="end"
+        android:paddingEnd="17dp"
+        android:layout_below="@id/leftImage1"
+        />
+
+
+
+</LinearLayout>

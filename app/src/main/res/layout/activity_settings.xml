@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="Activities.SettingsActivity">
+
+    <!--Toolbar-->
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#03A9F4"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="#03A9F4"
+            android:src="@drawable/ic_arrow_back_white" />
+
+
+        <TextView
+            android:id="@+id/nameP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/backBtn"
+            android:text="Profile Settings"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/UpdateLocation"
+            android:layout_width="75dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="15dp"
+            android:textAllCaps="false"
+            android:background="@drawable/boarder_background"
+            android:text="Update location"
+            android:textColor="@android:color/white"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2"
+        app:layout_constraintVertical_bias="1.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/settingsUserImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/boarder_background_search_circle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/add_photo" />
+
+            <EditText
+                android:id="@+id/profileStatus"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:padding="5dp"
+                android:background="@drawable/boarder_background_search"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="profile status"
+                android:inputType="textMultiLine"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/settingsUserImage" />
+
+            <EditText
+                android:id="@+id/personName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/boarder_background_search"
+                android:ems="10"
+                android:hint="Name"
+                android:drawableStart="@drawable/person"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/profileStatus"
+                app:layout_constraintStart_toStartOf="@+id/profileStatus"
+                app:layout_constraintTop_toBottomOf="@+id/profileStatus" />
+
+            <EditText
+                android:id="@+id/personCountry"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/boarder_background_search"
+                android:ems="10"
+                android:hint="Country"
+                android:drawableStart="@drawable/ic_location_icon"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/personName"
+                app:layout_constraintStart_toStartOf="@+id/personName"
+                app:layout_constraintTop_toBottomOf="@+id/personName" />
+
+            <EditText
+                android:id="@+id/personCity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/boarder_background_search"
+                android:ems="10"
+                android:hint="City"
+                android:drawableStart="@drawable/ic_location_icon"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/personCountry"
+                app:layout_constraintStart_toStartOf="@+id/personCountry"
+                app:layout_constraintTop_toBottomOf="@+id/personCountry" />
+
+            <EditText
+                android:id="@+id/personAddress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:background="@drawable/boarder_background_search"
+                android:padding="10dp"
+                android:hint="Address"
+                android:drawableStart="@drawable/ic_location_icon"
+                app:layout_constraintEnd_toEndOf="@+id/personCity"
+                app:layout_constraintStart_toStartOf="@+id/personCity"
+                app:layout_constraintTop_toBottomOf="@+id/personCity" />
+
+            <EditText
+                android:id="@+id/perosnGender"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/boarder_background_search"
+                android:drawableStart="@drawable/gender_icon"
+                android:ems="10"
+                android:hint="Gender"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/personAddress"
+                app:layout_constraintStart_toStartOf="@+id/personAddress"
+                app:layout_constraintTop_toBottomOf="@+id/personAddress" />
+
+            <EditText
+                android:id="@+id/perosnRelationship"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:background="@drawable/boarder_background_search"
+                android:padding="10dp"
+                android:drawableStart="@drawable/relationship"
+                android:hint="Relationship Status"
+                app:layout_constraintEnd_toEndOf="@+id/perosnGender"
+                app:layout_constraintStart_toStartOf="@+id/perosnGender"
+                app:layout_constraintTop_toBottomOf="@+id/perosnGender" />
+
+            <Button
+                android:id="@+id/updateProfile"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="16dp"
+                android:text="Update profile"
+                android:textColor="@android:color/white"
+                android:background="#03A9F4"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/perosnRelationship"
+                app:layout_constraintStart_toStartOf="@+id/perosnRelationship"
+                app:layout_constraintTop_toBottomOf="@+id/perosnRelationship" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

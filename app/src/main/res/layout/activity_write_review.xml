@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activities.WriteReviewActivity">
+
+    <!--Toolbar-->
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#03A9F4"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/nameP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/backBtn"
+            android:layout_alignBottom="@+id/backBtn"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="-3dp"
+            android:layout_toRightOf="@+id/backBtn"
+            android:text="Write Review"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/newLocation"
+            android:layout_alignBottom="@+id/newLocation"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="6dp"
+            app:srcCompat="@drawable/ic_arrow_back_white" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrolllayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/profileIv"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@drawable/store_gray"
+                android:background="@drawable/boarder_background_search"
+                android:layout_centerHorizontal="true"
+                android:scaleType="centerCrop"/>
+
+            <TextView
+                android:id="@+id/shopNameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Shop Name"
+                android:textColor="@color/colorPrimary"
+                android:layout_below="@id/profileIv"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/txtv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_marginTop="20dp"
+                android:textColor="@android:color/black"
+                android:text="How was your shopping experince with this seller? \n
+        your feedback is important for other buyers"
+                android:layout_below="@id/shopNameTv" />
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:numStars="5"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/txtv"/>
+            <EditText
+                android:id="@+id/reviewEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/boarder_background_search"
+                android:padding="10dp"
+                android:hint="Type Review..."
+                android:gravity="top"
+                android:minHeight="100dp"
+                android:layout_below="@id/ratingBar"
+                android:layout_marginTop="20dp"/>
+
+            <Button
+                android:id="@+id/SubmitBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:layout_margin="5dp"
+                android:text="Submit"
+                android:layout_below="@id/reviewEt"
+                android:textColor="@android:color/white" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/rdView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:adSize="MEDIUM_RECTANGLE"
+        app:adUnitId="@string/admob_banner_ad_id"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+
+</LinearLayout>

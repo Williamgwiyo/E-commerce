@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.MyShopFragment">
+
+    <!--Toolbar-->
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#D4D9DC"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+
+        <ImageButton
+            android:id="@+id/add_product"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/add_product"
+            app:tint="@android:color/black" />
+
+        <ImageButton
+            android:id="@+id/delete_shop"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/add_product"
+            android:src="@drawable/ic_delete_24"
+            app:tint="@android:color/black" />
+
+        <ImageButton
+            android:id="@+id/edit_shop"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_toLeftOf="@+id/add_product"
+            android:src="@drawable/ic_edit_24"
+            app:tint="@android:color/black" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/store_profile_image"
+            android:layout_width="65dp"
+            android:layout_height="70dp"
+            android:background="@drawable/boarder_background_search_circle"
+            android:src="@drawable/store_gray">
+        </de.hdodenhof.circleimageview.CircleImageView>
+
+        <TextView
+            android:id="@+id/personName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/store_profile_image"
+            android:text="Name"
+            android:layout_marginLeft="8dp"
+            android:textColor="@android:color/black"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/shopName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/store_profile_image"
+            android:layout_below="@id/personName"
+            android:text="Shop Name"
+            android:layout_marginLeft="8dp"
+            android:textColor="@android:color/black"
+            android:textSize="18dp"/>
+        <TextView
+            android:id="@+id/shop_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/store_profile_image"
+            android:layout_below="@id/shopName"
+            android:text="Email"
+            android:layout_marginLeft="8dp"
+            android:textColor="@android:color/black"
+            android:textSize="18dp"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/feature_shop_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/boarder_background"
+        android:backgroundTint="@color/colorPrimary"
+        android:drawableEnd="@drawable/arrow_end"
+        android:drawableTint="@android:color/white"
+        android:padding="5dp"
+        android:text="Feature my shop"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2" />
+
+    <EditText
+        android:id="@+id/search"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/boarder_background_search"
+        android:drawableStart="@drawable/ic_search_icon"
+        android:ems="10"
+        android:hint="Search"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/filterBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/feature_shop_btn" />
+
+    <ImageView
+        android:id="@+id/filterBtn"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        app:layout_constraintBottom_toBottomOf="@+id/search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/search"
+        app:srcCompat="@drawable/ic_category" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/product_recyclerview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="8dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/filtreredProducttv"
+        tools:listitem="@layout/row_products" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/myshoppdView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:adSize="BANNER"
+        app:adUnitId="@string/admob_banner_ad_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search" />
+
+    <TextView
+        android:id="@+id/filtreredProducttv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="5dp"
+        android:text="Showing All"
+        android:textColor="#0E0202"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myshoppdView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

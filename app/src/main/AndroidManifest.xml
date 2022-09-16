@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tu.tuchati">
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="TuChati"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name="com.tu.tuchati.Activities.PaymentActivity" />
+        <activity android:name="com.tu.tuchati.Activities.SellerOrderDetailsActivity" />
+        <activity android:name="com.tu.tuchati.Activities.OrderDetailsUsersActivity" />
+        <activity android:name="com.tu.tuchati.Activities.MyOrderActivity" />
+        <activity android:name="com.tu.tuchati.Activities.privateChatActivity" />
+        <activity android:name="com.tu.tuchati.Activities.GroupChatImageActivity" />
+        <activity android:name="com.tu.tuchati.Activities.CoverPhotoActivity" />
+        <activity android:name="com.tu.tuchati.ProfileImageActivity" />
+        <activity android:name="com.tu.tuchati.Activities.PostImageActivity" />
+        <activity android:name="com.tu.tuchati.Activities.ChatImage" />
+        <activity android:name="com.tu.tuchati.Activities.EditShopActivity" />
+        <activity android:name="com.tu.tuchati.Activities.EditGroupActivity" />
+        <activity android:name="com.tu.tuchati.Activities.ShopReviewsActivity" />
+        <activity android:name="com.tu.tuchati.Activities.WriteReviewActivity" />
+        <activity android:name="com.tu.tuchati.Activities.EditProductActivity" />
+        <activity android:name="com.tu.tuchati.Activities.ProfileMoreInfoActivity" />
+        <activity android:name="com.tu.tuchati.Activities.PersonProfileMoreInfoActivity" />
+        <activity android:name="com.tu.tuchati.Activities.GroupInfoActivity" />
+        <activity android:name="com.tu.tuchati.Activities.AddGroupParticipantActivity" />
+        <activity android:name="com.tu.tuchati.Activities.GroupChatActivity" />
+        <activity android:name="com.tu.tuchati.Activities.CreateGroupActivity" />
+        <activity android:name="com.tu.tuchati.Activities.PostLikedByActivity" />
+        <activity android:name="com.tu.tuchati.Activities.PostDetailsActivity" />
+        <activity android:name="com.tu.tuchati.Activities.FriendsActivity" />
+        <activity android:name="com.tu.tuchati.Activities.NearbyProfileActivity" />
+        <activity android:name="com.tu.tuchati.Activities.PeopleNearbyActivity" />
+        <activity android:name="com.tu.tuchati.Activities.ShopDetailsActivity" />
+        <activity android:name="com.tu.tuchati.Activities.ProductDetailsActivity" />
+        <activity android:name="com.tu.tuchati.Activities.MyShopActivity" />
+        <activity android:name="com.tu.tuchati.Activities.ShopAddProductActivity" />
+        <activity android:name="com.tu.tuchati.Activities.ShopSetupActivity" />
+        <activity android:name="com.tu.tuchati.Activities.SafetyTipsActivity" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/admob_ap_id" />
+
+        <activity android:name="com.tu.tuchati.Activities.PersonProfileActivity" />
+        <activity android:name="com.tu.tuchati.Activities.FindFriendsActivity" />
+        <activity android:name="com.tu.tuchati.Activities.MyProfileActivity" />
+        <activity android:name="com.tu.tuchati.Activities.SettingsActivity" />
+        <activity android:name="com.tu.tuchati.Activities.CreatePostActivity" />
+        <activity
+            android:name="com.tu.tuchati.Activities.VerifyOtpActivity"
+            android:windowSoftInputMode="stateVisible" />
+        <activity android:name="com.tu.tuchati.Activities.SetupProfileActivity" />
+        <activity android:name="com.tu.tuchati.Activities.HomeActivity" />
+        <activity
+            android:name="com.tu.tuchati.Activities.PhoneLoginActivity"
+            android:windowSoftInputMode="stateVisible" />
+        <activity android:name="com.tu.tuchati.Activities.EmailRegisterActivity" />
+        <activity android:name="com.tu.tuchati.Activities.EmailLoginActivity" />
+        <activity android:name="com.tu.tuchati.Activities.MainScreen" />
+        <activity android:name="com.tu.tuchati.Activities.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" /> <!-- optional (needed if default theme has no action bar) -->
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <service
+            android:name="com.tu.tuchati.notifications.FirebaseMessaging"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>
